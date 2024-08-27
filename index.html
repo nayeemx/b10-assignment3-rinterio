@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Add custom Tailwind CSS configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: {
+                        center: true,
+                        padding: '2rem',
+                        screens: {
+                            sm: '100%',
+                            md: '768px',
+                            lg: '1024px',
+                            xl: '1280px',
+                            '2xl': '1536px',
+                        },
+                    },
+                    fontFamily: {
+                        manrope: ['Manrope', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Manrope Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>demo page</h1>
+<body class="font-manrope bg-[#f5f5f5]">
+    <!-- hero -->
+    <header class="w-[96vw] h-auto mx-auto">
+        <nav class="h-16 w-full">
+            <div class="navbar flex items-center justify-between w-full h-full">
+
+                <!-- Left: Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="bg-[#ABEF5F] w-8 h-8 flex justify-center items-center rounded-full">
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </div>
+                    <a class="text-xl font-bold" href="#">Rinterio</a>
+                </div>
+
+                <!-- Center: Menus (Hidden on smallest screens) -->
+                <div class="hidden lg:flex space-x-4">
+                    <a href="#" class="font-bold">Home</a>
+                    <a href="#" class="">Services</a>
+                    <a href="#" class="">Portfolio</a>
+                    <a href="#" class="">Blogs</a>
+                    <a href="#" class="">Contact Us</a>
+                </div>
+
+                <!-- Right: Buttons and Menu Icon -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Icon (Hidden on smallest screens) -->
+                    <div class="hidden sm:flex bg-white w-10 h-10 justify-center items-center rounded-full border-[2px] border-[#737373]">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <!-- Shopping Cart Icon (Hidden on smallest screens) -->
+                    <div class="hidden sm:flex bg-white w-10 h-10 justify-center items-center rounded-full border-[2px] border-[#737373]">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <!-- Book Consult Button (Hidden on smallest screens) -->
+                    <a class="btn bg-[#ABEF5F] rounded-full hidden sm:flex items-center">
+                        Book Consult
+                        <div class="bg-[#1c1c1c] w-8 h-8 flex justify-center items-center rounded-full ml-2">
+                            <i class="fa-solid fa-arrow-right text-[#ABEF5F] -rotate-45"></i>
+                        </div>
+                    </a>
+                    <!-- Menu Icon (Shown only on smallest screens) -->
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-white rounded-full border-[2px] border-[#737373]">
+                        <i class="fa-solid fa-bars text-[#737373]"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- hereo container -->
+        <section class="md:container mx-auto mt-8">
+            <!-- Image -->
+            <div class="flex justify-center">
+                <img src="./assets/banner.png" alt="Barn House Image" class="w-full max-w-md">
+            </div>
+
+            <!-- Text Content -->
+            <div class="mt-6 text-center">
+                <!-- Heading -->
+                <h2 class="text-2xl font-bold">A barn house of this design has a striking appearance</h2>
+
+                <!-- Paragraph -->
+                <p class="mt-4 text-gray-600">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring
+                    weathered
+                    wood, sleek metal accents, and large windows that flood the space with natural light.
+                </p>
+            </div>
+
+            <!-- Button -->
+            <div class="flex justify-center mt-6">
+                <a
+                    class="btn bg-[rgba(171,239,95,0.5)] rounded-full flex items-center gap-2 border-[2px] border-[#ABEF5F] hover:bg-[rgba(171,239,95,0.5)] hover:border-[#ABEF5F]">
+                    View Details
+                    <div class="bg-[#ABEF5F] w-8 h-8 flex justify-center items-center rounded-full hover:bg-[#ABEF5F]">
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </header>
+    <!-- main -->
+    <main></main>
+    <!-- footer -->
+    <footer></footer>
 </body>
+
 </html>
